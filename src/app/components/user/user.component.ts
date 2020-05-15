@@ -1,0 +1,41 @@
+import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../services/user/user.service';
+
+@Component({
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
+})
+export class UserComponent implements OnInit {
+
+  public users;
+
+  constructor(private userService: UserService) { }
+
+  ngOnInit(): void {
+    this.getAllUsers();
+  }
+
+  parseRole(role){
+    switch (role){
+      case 1: return 'USER';
+      case 2: return 'MODERATOR';
+      case 3: return 'ADMIN';
+    }
+  }
+
+  getAllUsers() {
+    return this.userService.getAllUsers().subscribe(
+      data => {
+        this.users = data;
+      },
+      err => {
+        console.error(err);
+      },
+      () => {
+        console.log('Successfuly got');
+      }
+    );
+  }
+
+}
