@@ -18,9 +18,9 @@ export class UserComponent implements OnInit {
 
   parseRole(role){
     switch (role){
-      case 1: return 'USER';
-      case 2: return 'MODERATOR';
-      case 3: return 'ADMIN';
+      case 0: return 'USER';
+      case 1: return 'MODERATOR';
+      case 2: return 'ADMIN';
     }
   }
 

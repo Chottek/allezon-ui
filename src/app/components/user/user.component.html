@@ -6,6 +6,13 @@
     padding-right: 10px;
   }
 
+  th{
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+  }
+
+
 </style>
 <table>
 <tr>
@@ -14,7 +21,6 @@
   <th>Surname:</th>
   <th>Username:</th>
   <th>E-mail:</th>
-  <th>Password:</th>
   <th>Birthday:</th>
   <th>Role:</th>
 
@@ -25,7 +31,6 @@
   <td>{{u.surname}}</td>
   <td>{{u.username}}</td>
   <td>{{u.email}}</td>
-  <td>{{u.password}}</td>
   <td>{{u.birthdate}}</td>
   <td>{{parseRole(u.role)}}</td>
 </tr>
