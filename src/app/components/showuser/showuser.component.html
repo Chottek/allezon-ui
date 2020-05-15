@@ -1,10 +1,32 @@
 <h2 style="text-align: center">Showing user @{{user.username}}</h2>
 
-<button class="btn btn=primary" routerLink="/users" (click)="removeUser(user.id)">Delete User</button>
+<button style="margin-bottom: 20px;" routerLink="/users" (click)="removeUser(user.id)">Delete User</button>
+<button style="margin-bottom: 20px; margin-left: 100px;" routerLink="/users">Back to list</button>
 <br/>
-{{this.user.id}}<br/>
-{{this.user.name}}<br/>
-{{this.user.surname}}<br/>
-{{this.user.username}}<br/>
-{{this.user.role}}<br/>
-{{this.user.birthdate}}<br/>
+
+<table>
+  <tr>
+    <td>ID: </td>
+    <td>{{user.id}}</td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td>{{user.name}}</td>
+  </tr>
+  <tr>
+    <td>Surname:</td>
+    <td>{{user.surname}}</td>
+  </tr>
+  <tr>
+    <td>Username:</td>
+    <td>{{user.username}}</td>
+  </tr>
+  <tr>
+    <td>Role:</td>
+    <td>{{parseRole(user.role)}}</td>
+  </tr>
+  <tr>
+    <td>BirthDate:</td>
+    <td>{{user.birthdate}}</td>
+  </tr>
+</table>
