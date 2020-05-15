@@ -14,6 +14,10 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
+  getUserById(id: number){
+    return this.http.get('/server/api/users/get?id=' + id);
+  }
+
   getAllUsers() {
      return this.http.get('/server/api/users');
   }
