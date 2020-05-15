@@ -22,5 +22,17 @@ export class UserService {
     return this.http.post('/server/api/users', user, httpOptions);
   }
 
+  removeUser(id: number){
+    const url = '/server/api/users/' + id;
+    return this.http.delete(url).toPromise()
+      .then(() => null)
+      .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('Error', error);
+    return Promise.reject(error.message || error);
+  }
+
 
 }

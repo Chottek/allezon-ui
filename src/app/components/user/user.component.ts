@@ -24,6 +24,10 @@ export class UserComponent implements OnInit {
     }
   }
 
+  removeUser(id: number){
+    return this.userService.removeUser(id);
+  }
+
   getAllUsers() {
     return this.userService.getAllUsers().subscribe(
       data => {
