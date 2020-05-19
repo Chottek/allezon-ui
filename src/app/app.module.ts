@@ -11,8 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { ShowuserComponent } from './components/showuser/showuser.component';
-import { ShowauctionComponent } from './components/showauction/showauction.component';
+import { ShowUserComponent } from './components/user/show-user/show-user.component';
+import { ShowAuctionComponent } from './components/auction/show-auction/show-auction.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import { ShowauctionComponent } from './components/showauction/showauction.compo
     UserComponent,
     LoginComponent,
     RegisterComponent,
-    ShowuserComponent,
-    ShowauctionComponent
+    ShowUserComponent,
+    ShowAuctionComponent
   ],
     imports: [
         BrowserModule,

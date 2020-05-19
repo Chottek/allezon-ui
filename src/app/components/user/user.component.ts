@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    document.getElementById('users').setAttribute('style', 'background-color: blue;');
     this.getAllUsers();
   }
 

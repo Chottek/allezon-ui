@@ -4,8 +4,8 @@ import {AuctionComponent} from './components/auction/auction.component';
 import {UserComponent} from './components/user/user.component';
 import {LoginComponent} from './components/login/login.component';
 import {RegisterComponent} from './components/register/register.component';
-import {ShowauctionComponent} from './components/showauction/showauction.component';
-import {ShowuserComponent} from './components/showuser/showuser.component';
+import {ShowUserComponent} from './components/user/show-user/show-user.component';
+import {ShowAuctionComponent} from './components/auction/show-auction/show-auction.component';
 
 
 const routes: Routes = [
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'auctions/show',
-    component: ShowauctionComponent
+    component: ShowAuctionComponent
   },
   {
     path: 'users',
@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'users/show',
-    component: ShowuserComponent
+    component: ShowUserComponent
   },
   {
     path: 'login',

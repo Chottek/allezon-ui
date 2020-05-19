@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../../services/user/user.service';
+import {UserService} from '../../../services/user/user.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-showuser',
-  templateUrl: './showuser.component.html',
-  styleUrls: ['./showuser.component.css']
+  selector: 'app-show-user',
+  templateUrl: './show-user.component.html',
+  styleUrls: ['./show-user.component.css']
 })
-export class ShowuserComponent implements OnInit {
+export class ShowUserComponent implements OnInit {
 
   constructor(private userService: UserService, private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
@@ -43,7 +43,4 @@ export class ShowuserComponent implements OnInit {
       () => console.log('loaded')
     );
   }
-
-
-
 }

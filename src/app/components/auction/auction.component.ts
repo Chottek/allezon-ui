@@ -15,6 +15,7 @@ export class AuctionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.getElementById('auctions').setAttribute('style', 'background-color: blue;');
     this.getAllAuctions();
   }
 

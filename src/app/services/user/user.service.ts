@@ -19,7 +19,7 @@ export class UserService {
   }
 
   getAllUsers() {
-     return this.http.get('/server/api/users');
+      return this.http.get('/server/api/users');
   }
 
   registerUser(user){
@@ -32,6 +32,10 @@ export class UserService {
       .then(() => null)
       .catch(this.handleError);
   }
+
+  // loginUser(name, password){
+  //   return this.http.post('/server/api/login', name, password);
+  // }
 
   private handleError(error: any): Promise<any> {
     console.error('Error', error);

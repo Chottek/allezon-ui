@@ -1,0 +1,32 @@
+<h2 style="text-align: center">Showing auction {{auction.name}}</h2>
+
+<!--<button style="margin-bottom: 20px;" routerLink="/users" (click)="removeUser(user.id)">Delete User</button>-->
+<button style="margin-bottom: 20px; margin-left: 100px;" routerLink="/auctions">Back to list</button>
+<br/>
+
+<table>
+  <tr>
+    <td>ID: </td>
+    <td>{{auction.id}}</td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td>{{auction.name}}</td>
+  </tr>
+  <tr>
+    <td>Short Description:</td>
+    <td>{{auction.shortdesc}}</td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>{{auction.description}}</td>
+  </tr>
+  <tr>
+    <td>Price: </td>
+    <td>{{auction.price}}</td>
+  </tr>
+  <tr>
+    <td>Owner:</td>
+    <td>{{auction.owner}}</td>
+  </tr>
+</table>
