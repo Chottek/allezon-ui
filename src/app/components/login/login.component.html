@@ -1,9 +1,9 @@
+<div style="margin-top: 20px; margin-bottom: 30px;" *ngIf="registerMessage != ''">
+  <h3 class="has-info">{{registerMessage}}</h3>
+</div>
 
-Not a member?
-<button style="margin-bottom: 20px;" routerLink="/register">Register</button>
 
-
-<form method="post"  [formGroup]="loginForm" (ngSubmit)="submitLogin()" novalidate>
+<form method="post" class="registerframe" [formGroup]="loginForm" (ngSubmit)="submitLogin()" novalidate>
   <div *ngIf="validMessage != ''">
     <h3 class="has-info">{{validMessage}}</h3>
   </div>
@@ -16,5 +16,9 @@ Not a member?
     <input type="password" class="form-control" formControlName="password" required/>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Log In</button>
 </form>
+
+<div style="margin-top: 30px; text-align: center;">Not a member?
+  <button class="btn btn-secondary" style="width: 100px; height: 30px; font-size: small;" routerLink="/register">Sign up</button></div>
+

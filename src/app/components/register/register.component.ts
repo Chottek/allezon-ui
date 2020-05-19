@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from '../../services/user/user.service';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {Observable} from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,7 @@ export class RegisterComponent implements OnInit {
 
   public user;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -42,11 +43,9 @@ export class RegisterComponent implements OnInit {
 
     if (this.userForm.valid){
       this.userForm.removeControl('password1');
-      this.validMessage = 'User registered successfully!';
       this.userService.registerUser(this.userForm.value).subscribe(
         data => {
-          this.userForm.reset();
-          (document.getElementById('password1') as HTMLInputElement).value = '';
+          this.router.navigate(['/login'], { queryParams: { registered: true }});
           return true;
         },
         error => {
