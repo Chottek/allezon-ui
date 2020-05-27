@@ -1,7 +1,7 @@
 
 
 <div class="container">
-  <form method="post" class="registerframe"  [formGroup]="userForm" (ngSubmit)="submitRegistration()" novalidate>
+  <form method="post" class="registerframe" [formGroup]="userForm" (ngSubmit)="submitRegistration()" novalidate>
     <div *ngIf="validMessage != ''">
       <h3 class="has-info">{{validMessage}}</h3>
     </div>
